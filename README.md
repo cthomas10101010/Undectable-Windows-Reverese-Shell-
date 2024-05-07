@@ -15,6 +15,14 @@ Attackers’ machine after the target executes the script.
   
 ![image](https://github.com/cthomas10101010/Undectable-Windows-Reverese-Shell-/assets/169120401/f7551ca8-88b4-4ecc-84ea-b0eb3a94efd1)
 
+If you would like to host the payload on a webserver on your kali/parrot box use these comands
+Type mkdir /var/www/html/share and press Enter to create a shared folder
+Type chmod -R 755 /var/www/html/shell and press Enter
+Type chown -R www-data:www-data /var/www/html/shell and press Enter
+
+
+sudo nc -lnvp 443
+
 Identifying the specific antivirus software deployed on the target system will be helpful in bypassing it. 
 For example, if the antivirus software is only signature-based, then you just need to modify your payload to not match any of the signatures stored in the antivirus software catalog to bypass it. 
 To evade behavior-based detection, consider what ports, protocols, and devices the target device overtly communicates with.  For example, a computer calling out to port 443 is rarely considered an anomaly because most web servers use port 443 for HTTPS. 
