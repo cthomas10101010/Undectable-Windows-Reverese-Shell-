@@ -14,3 +14,14 @@ Of course, in a real-life scenario an attacker would use social engineering and 
 Attackers’ machine after the target executes the script.
   
 ![image](https://github.com/cthomas10101010/Undectable-Windows-Reverese-Shell-/assets/169120401/f7551ca8-88b4-4ecc-84ea-b0eb3a94efd1)
+
+Identifying the specific antivirus software deployed on the target system will be helpful in bypassing it. 
+For example, if the antivirus software is only signature-based, then you just need to modify your payload to not match any of the signatures stored in the antivirus software catalog to bypass it. 
+To evade behavior-based detection, consider what ports, protocols, and devices the target device overtly communicates with.  For example, a computer calling out to port 443 is rarely considered an anomaly because most web servers use port 443 for HTTPS. 
+
+Taking the time to understand your target and combining several methods is most likely to prove successful.
+Steganography: Embedding malware within seemingly innocuous files (e.g., images, audio, documents) to evade detection.
+Code Obfuscation: Using techniques to obscure the true purpose and behavior of malware code, making it harder to analyze.
+Encryption: Encrypting malware payloads and communication channels to prevent detection by security tools.
+Exploiting Legitimate Services: Leveraging legitimate software or services to execute malicious actions, making detection more challenging.
+Living off the Land: Leveraging built-in system utilities and legitimate software for malicious purposes to blend in with normal system activity.
